@@ -1,0 +1,20 @@
+openapi: 3.0.0
+
+info:
+  title: フランチャイズサロン API
+  description: フランチャイズサロン API 定義書
+  version: 0.0.1
+
+tags:
+  - name: 企業
+    description: 企業管理 REST API
+  - name: セッション
+    description: セッション管理 REST API
+
+paths:
+  /companies:
+    $ref: './src/paths/companies/index.yaml'
+  /companies/{id}:
+    $ref: './src/paths/companies/id/index.yaml'
+  /sessions:
+    $ref: './src/paths/sessions/index.yaml'
