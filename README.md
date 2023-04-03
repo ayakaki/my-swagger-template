@@ -1,37 +1,49 @@
 # my-swagger-template
 
-Swagger UI／Swagger API mock を使用するためのテンプレート<br>
+Swagger UI／Swagger API mock を使用するためのテンプレートプロジェクト<br>
 
-# Swagger の使用方法
+## FEATURE
 
-## 使用手順
+- swaggerui を用いた API 仕様書作成
+- stoplight/prism:4 を用いた API スタブ作成
+- yaml ファイルを用いたソースコード共通化
+  - components/base-data: GET するデータを基準に共通化
+  - components/error-response: HTTP レスポンスのエラーコンテンツを共通化
+- gulpfile を用いた共通コードの自動統合
 
-### 使用手順 1：docker-compose.yml が存在するフォルダへ移動
+## HOW TO USE
+
+### 1 ターミナルを開き、docker-compose.yml が存在するフォルダへ移動
 
 ターミナルを開き、docker-compose.yml が存在するフォルダへ移動<br>
 `cd ~/specs`
 
-### 使用手順 2：モジュール等のインストール
+### 2 npm パッケージのインストール
 
-npm を使用して npm パッケージをインストール<br>
-`npm ci`　<br>
+下記コマンドを実行<br>
+`npm ci`
 
-### 使用手順 3：コンテナ作成＆アプリ起動
+### 3 swagger.yaml を自動更新するための gulpfile の実行
 
-npm を用いて gulp 処理を実行。<br>
-※ swagger.yaml を自動更新するため<br>
-`npm start` <br>
+下記コマンドを実行<br>
+`npm start`
 
-<br>
-新しいターミナルを開き、docker-compose.yml が存在するコンテナに移動し、Docker コンテナを立ち上げる。<br>
-<br>
+### 4 Docker Desktop を起動
 
-`cd ~/specs` <br>
+ローカルにて Docker Desktop を起動する。<br>
+左下の Docker マークの色が青背景の白抜きになっていることを確認する。
+
+### 5 新規のターミナルを開き、docker-compose.yml が存在するフォルダへ移動
+
+新規のターミナルを開き、docker-compose.yml が存在するフォルダへ移動<br>
+`cd ~/specs`
+
+### 6 Docker コンテナを起動する
 
 ` docker-compose up -d`　<br>
-⇒ Docker コンテナが 2 つ起動していることを確認する。<br>
+⇒ Docker Desktop にて、Docker コンテナが 2 つ起動していることを確認する。<br>
 
-### 使用手順 4：サーバに接続する
+### 7 サーバに接続する
 
 ブラウザ等を経由してサーバに接続する。<br>
 
