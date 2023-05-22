@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  title: フランチャイズサロン API
-  description: フランチャイズサロン API 定義書
+  title: Swagger Template API
+  description: Swagger Template API 定義書
   version: 0.0.1
 tags:
   - name: 企業
